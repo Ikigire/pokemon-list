@@ -7,14 +7,14 @@ const PokemonThumbnail = ({
     image,
     type,
     height,
-    weigth,
-    prop1,
-    prop2,
-    prop3,
-    prop4,
-    prop5,
-    prop6,
-    prop7
+    weight,
+    hp,
+    attack,
+    defense,
+    special_attack,
+    special_defense,
+    speed,
+    
 }) => {
 
     const style = `thumb-container ${type}`;
@@ -23,7 +23,7 @@ const PokemonThumbnail = ({
 
     return(
         <>
-            <div>
+            <div className={style}>
                 <small>#0{id}</small>
                 <img src={image} alt={name} />
             </div>
@@ -38,14 +38,13 @@ const PokemonThumbnail = ({
                     show === true ? (
                         <Descripcion 
                             height={height}
-                            weigth={weigth}
-                            prop2={prop1}
-                            prop3={prop2}
-                            prop4={prop3}
-                            prop5={prop4}
-                            prop6={prop5}
-                            prop7={prop6}
-                            prop8={prop7}
+                            weight={weight}
+                            hp={hp}
+                            attack={attack}
+                            defense={defense}
+                            special_attack={special_attack}
+                            special_defense={special_defense}
+                            speed={speed}
                         />
                     )
                     :
